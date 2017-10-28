@@ -20,6 +20,8 @@
 		D1A561201FA425E500CF76CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */; };
 		D1A561221FA426C800CF76CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561211FA426C800CF76CA /* LoginViewController.swift */; };
 		D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */; };
+		D1A561261FA4894900CF76CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561251FA4894900CF76CA /* User.swift */; };
+		D1A561281FA48AC700CF76CA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561271FA48AC700CF76CA /* DateExtension.swift */; };
 		D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFDEC1FA4090700E80B20 /* AppDelegate.swift */; };
 		D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFDF31FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld */; };
 		D1BBFDF71FA4090700E80B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BBFDF61FA4090700E80B20 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D1A561211FA426C800CF76CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		D1A561251FA4894900CF76CA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1A561271FA48AC700CF76CA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D1BBFDE91FA4090700E80B20 /* hannes_social_community_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hannes_social_community_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BBFDEC1FA4090700E80B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BBFDF41FA4090700E80B20 /* hannes_social_community_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hannes_social_community_app.xcdatamodel; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		D1A561091FA40B3900CF76CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1A561251FA4894900CF76CA /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */,
 				D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */,
+				D1A561271FA48AC700CF76CA /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,9 +544,11 @@
 				D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */,
 				D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */,
 				D1A561191FA418BE00CF76CA /* TabBarController.swift in Sources */,
+				D1A561281FA48AC700CF76CA /* DateExtension.swift in Sources */,
 				D1A561131FA410DC00CF76CA /* ActiveUserHelper.swift in Sources */,
 				D1A561201FA425E500CF76CA /* UIColorExtension.swift in Sources */,
 				D1A5611D1FA41B1800CF76CA /* UsersViewController.swift in Sources */,
+				D1A561261FA4894900CF76CA /* User.swift in Sources */,
 				D1A5611B1FA41A6500CF76CA /* NetworkViewController.swift in Sources */,
 				D1A561221FA426C800CF76CA /* LoginViewController.swift in Sources */,
 				D1A561171FA415F400CF76CA /* HomeViewController.swift in Sources */,

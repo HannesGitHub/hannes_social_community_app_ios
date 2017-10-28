@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 
 var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
+var signupUrl = "api/signup"
 
 class ApiService{
     let headers: HTTPHeaders = [
@@ -24,14 +25,14 @@ class ApiService{
             "username": username,
             "password": password
         ]
-        
-        baseRequest(.post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
-            completionHandler(response, error)
+        baseRequest(methodUrl: signupUrl, .post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
+            completionHandler(resopnse, error)
         }
     }
     
-    func baseRequest(_ method : HTTPMethod, paramaters : [String: Any]?, headers: [String: String], completionHandler:@escaping (NSDictionary?, NSError?) -> ()) {
-        Alamofire.request(baseUrl, method: method, parameters: paramaters, encoding: JSONEncoding.default, headers: headers)
+    func baseRequest(methodUrl: String, _ method : HTTPMethod, paramaters : [String: Any]?, headers: [String: String], completionHandler:@escaping (NSDictionary?, NSError?) -> ()) {
+        let url = baseUrl + methodUrl
+        Alamofire.request(url, method: method, parameters: paramaters, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
                 switch response.result {
                 case .success(let value):

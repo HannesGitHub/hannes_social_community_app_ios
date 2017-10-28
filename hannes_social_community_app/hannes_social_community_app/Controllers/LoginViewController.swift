@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    let apiClient = ApiService()
+    
     let profileImageView: UIImageView = {
        let imageView = UIImageView()
         imageView.image = UIImage(named: "social_icon")
@@ -84,12 +86,27 @@ class LoginViewController: UIViewController {
     
     @objc func handleRegister(){
         
+        guard let name = txtName.text, !name.isEmpty, let username = txtUsername.text, !username.isEmpty, let password = txtPassword.text, !password.isEmpty else{
+            return
+        }
+        apiClient.register(name: name, username: username, password: password) { (dict, error) in
+            if let response = dict{
+                let user = User(dict: response)
+                if let userAuthToken = user.authToken{
+                    ActiveUserHelper.uuid = userAuthToken
+                }else{
+                    print("Server did not respond with auth token")
+                }
+            }else if error != nil{
+                print(error!.localizedDescription)
+            }
+        }
     }
     
     func buildView(){
         self.view.addSubview(inputContainerView)
         
-//        Image view
+        //Image view
         self.view.addSubview(profileImageView)
         profileImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         profileImageView.bottomAnchor.constraint(equalTo: inputContainerView.topAnchor, constant: -12).isActive = true
