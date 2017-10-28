@@ -1,0 +1,6 @@
+framework module Pods_hannes_social_community_appUITests {
+  umbrella header "Pods-hannes_social_community_appUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

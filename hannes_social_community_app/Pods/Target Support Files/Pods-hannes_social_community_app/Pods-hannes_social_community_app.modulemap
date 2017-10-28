@@ -1,0 +1,6 @@
+framework module Pods_hannes_social_community_app {
+  umbrella header "Pods-hannes_social_community_app-umbrella.h"
+
+  export *
+  module * { export * }
+}

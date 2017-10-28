@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, ’10.0’
+
+target 'hannes_social_community_app' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for hannes_social_community_app
+	pod 'Alamofire', '~> 4.5’
+
+
+  target 'hannes_social_community_appTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'hannes_social_community_appUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
