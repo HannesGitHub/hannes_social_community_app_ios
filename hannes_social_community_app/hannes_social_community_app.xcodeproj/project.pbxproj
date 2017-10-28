@@ -14,6 +14,7 @@
 		D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */; };
 		D12F02141FA4CE7400FA3E44 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02131FA4CE7400FA3E44 /* Post.swift */; };
 		D12F02161FA4D1C400FA3E44 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02151FA4D1C400FA3E44 /* PostCellController.swift */; };
+		D12F02181FA4D48600FA3E44 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */; };
 		D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5610D1FA40B6700CF76CA /* ApiClient.swift */; };
 		D1A5610F1FA40B9C00CF76CA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A561101FA40B9C00CF76CA /* Alamofire.framework */; };
 		D1A561131FA410DC00CF76CA /* ActiveUserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */; };
@@ -62,6 +63,7 @@
 		D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellController.swift; sourceTree = "<group>"; };
 		D12F02131FA4CE7400FA3E44 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D12F02151FA4D1C400FA3E44 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
+		D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D1A5610D1FA40B6700CF76CA /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D1A561101FA40B9C00CF76CA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUserHelper.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */,
 				D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */,
 				D1A561211FA426C800CF76CA /* LoginViewController.swift */,
+				D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			files = (
 				D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */,
 				D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */,
+				D12F02181FA4D48600FA3E44 /* UserDetailViewController.swift in Sources */,
 				D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */,
 				D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */,
 				D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */,

@@ -88,6 +88,11 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource{
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = UserDetailViewController()
+//        vc.user = viewData[indexPath.row]
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! CustomTableViewCell
         cell.applyDefaults(user: viewData[indexPath.row])
