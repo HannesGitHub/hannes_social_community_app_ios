@@ -10,9 +10,9 @@ import Foundation
 
 class ActiveUserHelper{
     
-    static var uuid: String{
+    static var uuid: String?{
         get{
-            return UserDefaults.standard.value(forKey: "user_uid") as? String ?? ""
+            return UserDefaults.standard.value(forKey: "user_uid") as? String ?? nil
         }
         set{
             UserDefaults.standard.setValue(newValue, forKey: "user_uid")

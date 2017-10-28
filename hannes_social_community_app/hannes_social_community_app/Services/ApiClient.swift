@@ -11,10 +11,11 @@ import Alamofire
 
 var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
 var signupUrl = "api/signup"
+var signinUrl = "api/login_auth"
 
 class ApiService{
     let headers: HTTPHeaders = [
-        "Authorization": "Token token=\(ActiveUserHelper.uuid)",
+        "Authorization": "Token token=\(String(describing: ActiveUserHelper.uuid))",
         "Content-type": "application/json",
         "Accept": "text/html"
     ]
@@ -26,6 +27,16 @@ class ApiService{
             "password": password
         ]
         baseRequest(methodUrl: signupUrl, .post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
+            completionHandler(resopnse, error)
+        }
+    }
+    
+    func login(username: String, password: String, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        let paramaters = [
+            "username": username,
+            "password": password
+        ]
+        baseRequest(methodUrl: signinUrl, .post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
             completionHandler(resopnse, error)
         }
     }

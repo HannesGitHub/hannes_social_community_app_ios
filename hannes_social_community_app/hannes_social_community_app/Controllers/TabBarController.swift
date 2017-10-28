@@ -13,11 +13,18 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        perform(#selector(checkIfUserIsLoggedIn), with: nil, afterDelay: 0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         buildView()
+    }
+    
+    @objc func checkIfUserIsLoggedIn(){
+        if ActiveUserHelper.uuid == nil{
+            handleLogOut()
+        }
     }
     
     func buildView(){
@@ -42,8 +49,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     @objc func handleLogOut(){
+        ActiveUserHelper.uuid = nil
         let loginController = LoginViewController()
-        present(loginController, animated: true, completion: nil)
+        
+        self.present(loginController, animated: true, completion: nil)
     }
 }
 

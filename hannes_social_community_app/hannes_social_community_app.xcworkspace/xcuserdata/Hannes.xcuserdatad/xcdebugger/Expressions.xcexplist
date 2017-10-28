@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "TabBarController.checkIfUserIsLoggedIn():TabBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ActiveUserHelper.uuid">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in ApiService.register(name:username:password:completionHandler:):ApiClient.swift">
          <PersistentStrings>
             <PersistentString
