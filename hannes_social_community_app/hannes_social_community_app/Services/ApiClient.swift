@@ -17,33 +17,30 @@ class ApiService{
         "Content-type": "application/json",
         "Accept": "text/html"
     ]
+
+    func register(name: String, username: String, password: String, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        let paramaters = [
+            "name": name,
+            "username": username,
+            "password": password
+        ]
+        
+        baseRequest(.post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
+            completionHandler(response, error)
+        }
+    }
     
-    let params = ["device": "main-gate-1",
-                  "topic": "main-gate",
-                  "value": 3] as [String : Any]
-    
-    func doTest(){
-        Alamofire.request(baseUrl, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers)
-            .responseString { response in
+    func baseRequest(_ method : HTTPMethod, paramaters : [String: Any]?, headers: [String: String], completionHandler:@escaping (NSDictionary?, NSError?) -> ()) {
+        Alamofire.request(baseUrl, method: method, parameters: paramaters, encoding: JSONEncoding.default, headers: headers)
+            .responseJSON { response in
                 switch response.result {
                 case .success(let value):
-                    print(value)
+                    completionHandler(value as? NSDictionary, nil)
                     break
-                    
                 case .failure(let error):
-                    print(error)
+                    completionHandler(nil, error as NSError)
                     break
                 }
         }
     }
-    
-    static func hannesTest(){
-        
-    }
-    
-    
-    
-    
-    
 }
-

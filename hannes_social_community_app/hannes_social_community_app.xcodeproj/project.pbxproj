@@ -17,6 +17,9 @@
 		D1A561191FA418BE00CF76CA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561181FA418BE00CF76CA /* TabBarController.swift */; };
 		D1A5611B1FA41A6500CF76CA /* NetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */; };
 		D1A5611D1FA41B1800CF76CA /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */; };
+		D1A561201FA425E500CF76CA /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */; };
+		D1A561221FA426C800CF76CA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561211FA426C800CF76CA /* LoginViewController.swift */; };
+		D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */; };
 		D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFDEC1FA4090700E80B20 /* AppDelegate.swift */; };
 		D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1BBFDF31FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld */; };
 		D1BBFDF71FA4090700E80B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1BBFDF61FA4090700E80B20 /* Assets.xcassets */; };
@@ -56,6 +59,9 @@
 		D1A561181FA418BE00CF76CA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewController.swift; sourceTree = "<group>"; };
 		D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D1A561211FA426C800CF76CA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D1BBFDE91FA4090700E80B20 /* hannes_social_community_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hannes_social_community_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BBFDEC1FA4090700E80B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BBFDF41FA4090700E80B20 /* hannes_social_community_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hannes_social_community_app.xcdatamodel; sourceTree = "<group>"; };
@@ -147,6 +153,7 @@
 				D1A561181FA418BE00CF76CA /* TabBarController.swift */,
 				D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */,
 				D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */,
+				D1A561211FA426C800CF76CA /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +172,15 @@
 				D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D1A5611E1FA425D000CF76CA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D1A5611F1FA425E500CF76CA /* UIColorExtension.swift */,
+				D1A561231FA42C6400CF76CA /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D1BBFDE01FA4090700E80B20 = {
@@ -192,6 +208,7 @@
 		D1BBFDEB1FA4090700E80B20 /* hannes_social_community_app */ = {
 			isa = PBXGroup;
 			children = (
+				D1A5611E1FA425D000CF76CA /* Extensions */,
 				D1A561111FA410C800CF76CA /* Helpers */,
 				D1A5610C1FA40B5100CF76CA /* Services */,
 				D1A5610B1FA40B4600CF76CA /* Controllers */,
@@ -517,12 +534,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */,
+				D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */,
 				D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */,
 				D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */,
 				D1A561191FA418BE00CF76CA /* TabBarController.swift in Sources */,
 				D1A561131FA410DC00CF76CA /* ActiveUserHelper.swift in Sources */,
+				D1A561201FA425E500CF76CA /* UIColorExtension.swift in Sources */,
 				D1A5611D1FA41B1800CF76CA /* UsersViewController.swift in Sources */,
 				D1A5611B1FA41A6500CF76CA /* NetworkViewController.swift in Sources */,
+				D1A561221FA426C800CF76CA /* LoginViewController.swift in Sources */,
 				D1A561171FA415F400CF76CA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

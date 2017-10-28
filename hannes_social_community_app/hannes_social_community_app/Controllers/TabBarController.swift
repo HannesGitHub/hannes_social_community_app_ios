@@ -17,6 +17,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        buildView()
+    }
+    
+    func buildView(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogOut))
         
         // Create home tab
         let homeTab = HomeViewController()
@@ -36,6 +41,13 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.viewControllers = [homeTab, networkTab, usersTab]
     }
     
+    @objc func handleLogOut(){
+        let loginController = LoginViewController()
+        present(loginController, animated: true, completion: nil)
+    }
+}
+
+extension TabBarController{
     // UITabBarControllerDelegate method
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         print("Selected \(viewController.title ?? "not set")")
