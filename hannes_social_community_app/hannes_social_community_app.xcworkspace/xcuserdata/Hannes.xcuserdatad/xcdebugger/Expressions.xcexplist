@@ -3,18 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "TabBarController.checkIfUserIsLoggedIn():TabBarController.swift">
+         contextName = "closure #1 in NetworkViewController.retrieveDataFromBackend():NetworkViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "ActiveUserHelper.uuid">
+               value = "print(dict)">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in ApiService.register(name:username:password:completionHandler:):ApiClient.swift">
-         <PersistentStrings>
             <PersistentString
-               value = "error.localizedDescription">
+               value = "dict as? NSDictionary">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -30,10 +25,85 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "TabBarController.checkIfUserIsLoggedIn():TabBarController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ActiveUserHelper.uuid">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ApiService.baseRequest(methodUrl:_:paramaters:headers:completionHandler:):ApiClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error.localizedDescription">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static SocialHelper.populateUsersFromList(dict:):SocialHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "User(dict: userObj)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "HomeViewController.buildView():HomeViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "super.navigationItem.leftBarButtonItem">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in HomeViewController.retrieveDataFromBackend():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dictionary[&quot;data&quot;] as? NSArray">
+            </PersistentString>
+            <PersistentString
+               value = "Post(dict: object)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NetworkViewController.populateViewData(dict:index:):NetworkViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "SocialHelper.populateUsersFromList(dict: response)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Post.init(dict:):Post.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(dict)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ApiService.baseRequest(methodUrl:_:paramaters:headers:completionHandler:):ApiClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(paramaters)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in ApiService.register(name:username:password:completionHandler:):ApiClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error.localizedDescription">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in UsersViewController.retrieveBackendData():UsersViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "User(dict: userDict)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

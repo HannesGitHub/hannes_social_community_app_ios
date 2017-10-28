@@ -9,13 +9,20 @@
 import Foundation
 import Alamofire
 
-var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
+//var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
+var baseUrl = "https://dd6c359a.ngrok.io/"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"
+var getFollowersUrl = "api/v1/me/followers"
+var getFollowingUrl = "api/v1/me/following"
+var getAllUsersUrl = "api/v1/users"
+var getNewsFeedUrl = "api/v1/me/news_feed"
+
 
 class ApiService{
+    
     let headers: HTTPHeaders = [
-        "Authorization": "Token token=\(String(describing: ActiveUserHelper.uuid))",
+        "Authorization": "Token token=\(ActiveUserHelper.uuid != nil ?  ActiveUserHelper.uuid! : "")",
         "Content-type": "application/json",
         "Accept": "text/html"
     ]
@@ -38,6 +45,30 @@ class ApiService{
         ]
         baseRequest(methodUrl: signinUrl, .post, paramaters: paramaters, headers: [:]) { (resopnse, error) in
             completionHandler(resopnse, error)
+        }
+    }
+    
+    func getFollowers(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        baseRequest(methodUrl: getFollowersUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func getFollowing(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        baseRequest(methodUrl: getFollowingUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func getAllUsers(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        baseRequest(methodUrl: getFollowingUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func getNewsFeed(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        baseRequest(methodUrl: getNewsFeedUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
         }
     }
     

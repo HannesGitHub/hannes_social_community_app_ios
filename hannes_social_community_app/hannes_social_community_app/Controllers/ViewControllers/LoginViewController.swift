@@ -237,18 +237,3 @@ class LoginViewController: UIViewController {
         passwordTextFieldHeightAnchor?.isActive = true
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

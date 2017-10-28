@@ -41,7 +41,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         networkTab.tabBarItem = networkTabBarItem
         
         //Create users tab
-        let usersTab = NetworkViewController()
+        let usersTab = UsersViewController()
         let usersTabBarItem = UITabBarItem(title: "Users", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
         usersTab.tabBarItem = usersTabBarItem
         

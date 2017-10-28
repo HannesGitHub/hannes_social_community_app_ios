@@ -10,6 +10,10 @@
 		026E08AF842A24C2A0831356 /* Pods_hannes_social_community_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEC4A90DDF3651A947E20B /* Pods_hannes_social_community_appUITests.framework */; };
 		4367ACD09296ED2DF1C4A573 /* Pods_hannes_social_community_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406E619D6ADC8B120F2EC5E2 /* Pods_hannes_social_community_appTests.framework */; };
 		9096B09885AEAD9EFBB61B24 /* Pods_hannes_social_community_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11508E8EAE6C56DBEAF3D5C /* Pods_hannes_social_community_app.framework */; };
+		D12F020E1FA4AC8C00FA3E44 /* SocialHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F020D1FA4AC8C00FA3E44 /* SocialHelper.swift */; };
+		D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */; };
+		D12F02141FA4CE7400FA3E44 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02131FA4CE7400FA3E44 /* Post.swift */; };
+		D12F02161FA4D1C400FA3E44 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02151FA4D1C400FA3E44 /* PostCellController.swift */; };
 		D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5610D1FA40B6700CF76CA /* ApiClient.swift */; };
 		D1A5610F1FA40B9C00CF76CA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A561101FA40B9C00CF76CA /* Alamofire.framework */; };
 		D1A561131FA410DC00CF76CA /* ActiveUserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */; };
@@ -54,6 +58,10 @@
 		8ED8743908D7205DD982DC21 /* Pods-hannes_social_community_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hannes_social_community_appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hannes_social_community_appTests/Pods-hannes_social_community_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC12B5AAAEF571EE281B2B59 /* Pods-hannes_social_community_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hannes_social_community_appUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-hannes_social_community_appUITests/Pods-hannes_social_community_appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B11508E8EAE6C56DBEAF3D5C /* Pods_hannes_social_community_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hannes_social_community_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D12F020D1FA4AC8C00FA3E44 /* SocialHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialHelper.swift; sourceTree = "<group>"; };
+		D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellController.swift; sourceTree = "<group>"; };
+		D12F02131FA4CE7400FA3E44 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D12F02151FA4D1C400FA3E44 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
 		D1A5610D1FA40B6700CF76CA /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D1A561101FA40B9C00CF76CA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUserHelper.swift; sourceTree = "<group>"; };
@@ -136,22 +144,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D1A561091FA40B3900CF76CA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D1A561251FA4894900CF76CA /* User.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D1A5610A1FA40B4200CF76CA /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D1A5610B1FA40B4600CF76CA /* Controllers */ = {
+		D12F020F1FA4B55F00FA3E44 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				D1A561161FA415F400CF76CA /* HomeViewController.swift */,
@@ -159,6 +152,33 @@
 				D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */,
 				D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */,
 				D1A561211FA426C800CF76CA /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D12F02101FA4B58E00FA3E44 /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */,
+				D12F02151FA4D1C400FA3E44 /* PostCellController.swift */,
+			);
+			path = CellControllers;
+			sourceTree = "<group>";
+		};
+		D1A561091FA40B3900CF76CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1A561251FA4894900CF76CA /* User.swift */,
+				D12F02131FA4CE7400FA3E44 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D1A5610B1FA40B4600CF76CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D12F02101FA4B58E00FA3E44 /* CellControllers */,
+				D12F020F1FA4B55F00FA3E44 /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */,
+				D12F020D1FA4AC8C00FA3E44 /* SocialHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -218,7 +239,6 @@
 				D1A561111FA410C800CF76CA /* Helpers */,
 				D1A5610C1FA40B5100CF76CA /* Services */,
 				D1A5610B1FA40B4600CF76CA /* Controllers */,
-				D1A5610A1FA40B4200CF76CA /* Views */,
 				D1A561091FA40B3900CF76CA /* Models */,
 				D1BBFDEC1FA4090700E80B20 /* AppDelegate.swift */,
 				D1BBFDF61FA4090700E80B20 /* Assets.xcassets */,
@@ -541,6 +561,7 @@
 			files = (
 				D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */,
 				D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */,
+				D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */,
 				D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */,
 				D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */,
 				D1A561191FA418BE00CF76CA /* TabBarController.swift in Sources */,
@@ -549,8 +570,11 @@
 				D1A561201FA425E500CF76CA /* UIColorExtension.swift in Sources */,
 				D1A5611D1FA41B1800CF76CA /* UsersViewController.swift in Sources */,
 				D1A561261FA4894900CF76CA /* User.swift in Sources */,
+				D12F02141FA4CE7400FA3E44 /* Post.swift in Sources */,
 				D1A5611B1FA41A6500CF76CA /* NetworkViewController.swift in Sources */,
+				D12F02161FA4D1C400FA3E44 /* PostCellController.swift in Sources */,
 				D1A561221FA426C800CF76CA /* LoginViewController.swift in Sources */,
+				D12F020E1FA4AC8C00FA3E44 /* SocialHelper.swift in Sources */,
 				D1A561171FA415F400CF76CA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
