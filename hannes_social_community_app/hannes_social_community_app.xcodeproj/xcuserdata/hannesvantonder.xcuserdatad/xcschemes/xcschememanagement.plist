@@ -7,7 +7,11 @@
 		<key>hannes_social_community_app.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>4</integer>
+=======
+			<integer>0</integer>
+>>>>>>> e391e092ab18247e26cfd1b95247e223019a9db7
 		</dict>
 	</dict>
 </dict>

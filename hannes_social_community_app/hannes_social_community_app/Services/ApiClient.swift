@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 
 //var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
-var baseUrl = "https://bae412d0.ngrok.io/"
+
+var baseUrl = "https://bae412d0.ngrok.io"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"
 var getFollowersUrl = "api/v1/me/followers"
