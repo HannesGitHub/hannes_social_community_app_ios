@@ -29,6 +29,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     
     func buildView(){
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(handleLogOut))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .plain, target: self, action: #selector(openPostController))
         
         // Create home tab
         let homeTab = HomeViewController()
@@ -46,6 +47,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         usersTab.tabBarItem = usersTabBarItem
         
         self.viewControllers = [homeTab, networkTab, usersTab]
+    }
+    
+    @objc func openPostController(){
+        let postController = PostViewController()
+        self.navigationController?.pushViewController(postController, animated: true)
     }
     
     @objc func handleLogOut(){

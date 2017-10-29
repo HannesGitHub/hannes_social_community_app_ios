@@ -208,8 +208,8 @@ class LoginViewController: UIViewController {
         // Name field
         self.view.addSubview(txtName)
         txtName.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor, constant: 12).isActive = true
+        txtName.rightAnchor.constraint(equalTo: inputContainerView.rightAnchor, constant: -12).isActive = true
         txtName.topAnchor.constraint(equalTo: inputContainerView.topAnchor).isActive = true
-        txtName.widthAnchor.constraint(lessThanOrEqualTo: inputContainerView.widthAnchor).isActive = true
         nameTextFieldHeightAnchor = txtName.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3)
         nameTextFieldHeightAnchor?.isActive = true
         
@@ -223,8 +223,8 @@ class LoginViewController: UIViewController {
         // Username field
         self.view.addSubview(txtUsername)
         txtUsername.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor, constant: 12).isActive = true
+        txtUsername.rightAnchor.constraint(equalTo: inputContainerView.rightAnchor, constant: -12).isActive = true
         txtUsername.topAnchor.constraint(equalTo: txtName.bottomAnchor).isActive = true
-        txtUsername.widthAnchor.constraint(lessThanOrEqualTo: inputContainerView.widthAnchor).isActive = true
         emailTextFieldHeightAnchor = txtUsername.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3)
         emailTextFieldHeightAnchor?.isActive = true
         
@@ -238,8 +238,8 @@ class LoginViewController: UIViewController {
         // Password field
         self.view.addSubview(txtPassword)
         txtPassword.leftAnchor.constraint(equalTo: inputContainerView.leftAnchor, constant: 12).isActive = true
+        txtPassword.rightAnchor.constraint(equalTo: inputContainerView.rightAnchor, constant: -12).isActive = true
         txtPassword.topAnchor.constraint(equalTo: txtUsername.bottomAnchor).isActive = true
-        txtPassword.widthAnchor.constraint(lessThanOrEqualTo: inputContainerView.widthAnchor).isActive = true
         passwordTextFieldHeightAnchor = txtPassword.heightAnchor.constraint(equalTo: inputContainerView.heightAnchor, multiplier: 1/3)
         passwordTextFieldHeightAnchor?.isActive = true
     }

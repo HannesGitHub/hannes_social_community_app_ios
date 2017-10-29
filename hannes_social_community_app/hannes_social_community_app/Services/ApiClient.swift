@@ -11,7 +11,7 @@ import Alamofire
 
 //var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
 
-var baseUrl = "https://bae412d0.ngrok.io"
+var baseUrl = "https://bae412d0.ngrok.io/"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"
 var getFollowersUrl = "api/v1/me/followers"
@@ -20,6 +20,7 @@ var getAllUsersUrl = "api/v1/users"
 var getNewsFeedUrl = "api/v1/me/news_feed"
 var followUserUrl = "api/v1/me/follow/"
 var unFollowUserUrl = "api/v1/me/unfollow/"
+var createPostUrl = "api/v1/posts"
 
 class ApiService{
     
@@ -84,6 +85,12 @@ class ApiService{
     
     func getNewsFeed(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
         baseRequest(methodUrl: getNewsFeedUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func createPost(title: String, postText: String, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        baseRequest(methodUrl: createPostUrl, .post, paramaters: nil, headers: headers) { (response, error) in
             completionHandler(response, error)
         }
     }
