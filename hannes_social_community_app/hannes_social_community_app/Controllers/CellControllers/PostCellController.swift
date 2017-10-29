@@ -48,9 +48,14 @@ class PostCellController: UITableViewCell {
     }
     
     func applyDefaults(post: Post){
+        var text = ""
         if let postTitle = post.title{
-            title.text = postTitle
+            text += postTitle
         }
+        if let username = post.username{
+            text += " - \(username)"
+        }
+        title.text = text
         if let text =  post.message{
             subTitle.text = "\(text)"
         }

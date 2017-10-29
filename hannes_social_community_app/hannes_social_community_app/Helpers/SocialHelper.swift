@@ -18,6 +18,9 @@ class SocialHelper{
                     if let userObj = innerObj["user"] as? NSDictionary{
                         users.append(User(dict: userObj))
                     }
+                    else if let userObj = innerObj["follower"] as? NSDictionary{
+                        users.append(User(dict: userObj))
+                    }
                 }
             }
         }

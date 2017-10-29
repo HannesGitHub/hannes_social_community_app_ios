@@ -9,7 +9,7 @@
 import UIKit
 
 class UsersViewController: UIViewController {
-
+    
     let apiClient = ApiService()
     var viewData: [User] = []
     var cellId = "customCell"
@@ -42,8 +42,8 @@ class UsersViewController: UIViewController {
     }
     
     func retrieveBackendData(){
-        viewData = []
         apiClient.getAllUsers { (dict, error) in
+            self.viewData = []
             if error != nil{
                 print(error!.localizedDescription)
             }
@@ -52,9 +52,7 @@ class UsersViewController: UIViewController {
                     if let objects = response["data"] as? NSArray{
                         for obj in objects{
                             if let objDict = obj as? NSDictionary{
-                                if let userDict = objDict["follower"] as? NSDictionary{
-                                    self.viewData.append(User(dict: userDict))
-                                }
+                                self.viewData.append(User(dict: objDict))
                             }
                         }
                     }
@@ -89,8 +87,9 @@ extension UsersViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = UserDetailViewController()
-//        vc.user = viewData[indexPath.row]
+        let vc = UserDetailViewController()
+        vc.user = self.viewData[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

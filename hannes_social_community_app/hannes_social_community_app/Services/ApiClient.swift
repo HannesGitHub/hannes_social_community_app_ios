@@ -10,14 +10,15 @@ import Foundation
 import Alamofire
 
 //var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
-var baseUrl = "https://dd6c359a.ngrok.io/"
+var baseUrl = "https://bae412d0.ngrok.io/"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"
 var getFollowersUrl = "api/v1/me/followers"
 var getFollowingUrl = "api/v1/me/following"
 var getAllUsersUrl = "api/v1/users"
 var getNewsFeedUrl = "api/v1/me/news_feed"
-
+var followUserUrl = "api/v1/me/follow/"
+var unFollowUserUrl = "api/v1/me/unfollow/"
 
 class ApiService{
     
@@ -26,7 +27,7 @@ class ApiService{
         "Content-type": "application/json",
         "Accept": "text/html"
     ]
-
+    
     func register(name: String, username: String, password: String, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
         let paramaters = [
             "name": name,
@@ -61,7 +62,21 @@ class ApiService{
     }
     
     func getAllUsers(completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
-        baseRequest(methodUrl: getFollowingUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+        baseRequest(methodUrl: getAllUsersUrl, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func followUser(userId: Int, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        let url = "\(followUserUrl)\(userId)"
+        baseRequest(methodUrl: url, .get, paramaters: nil, headers: headers) { (response, error) in
+            completionHandler(response, error)
+        }
+    }
+    
+    func unFollowUser(userId: Int, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
+        let url = "\(unFollowUserUrl)\(userId)"
+        baseRequest(methodUrl: url, .get, paramaters: nil, headers: headers) { (response, error) in
             completionHandler(response, error)
         }
     }

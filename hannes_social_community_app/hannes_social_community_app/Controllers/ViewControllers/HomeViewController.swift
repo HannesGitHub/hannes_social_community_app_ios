@@ -39,15 +39,18 @@ class HomeViewController: UIViewController {
             }
             else{
                 if let dictionary = dict{
-                    if let arrayData = dictionary["data"] as? NSArray{
-                        for obj in arrayData{
-                            if let object = obj as? NSDictionary{
-                                self.viewData.append(Post(dict: object))
+                    if let dArray = dictionary["data"] as? NSDictionary{
+                        if let arrayData = dArray["data"] as? NSArray{
+                            for obj in arrayData{
+                                if let object = obj as? NSDictionary{
+                                    self.viewData.append(Post(dict: object))
+                                }
                             }
                         }
                     }
                 }
             }
+            self.viewData.sort(){$0.createdAt! > $1.createdAt!}
             self.tableView.reloadData()
         }
     }

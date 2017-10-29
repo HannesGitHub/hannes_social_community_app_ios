@@ -15,6 +15,7 @@ class Post: NSObject {
     var updatedAt: Date?
     var message: String?
     var userId: Int?
+    var username: String?
     
     init(dict: NSDictionary){
         if let createdAt = dict["created_at"] as? String{
@@ -31,6 +32,9 @@ class Post: NSObject {
         }
         if let message = dict["message"] as? String{
             self.message = message
+        }
+        if let username = dict["username"] as? String{
+            self.username = username
         }
     }
 }

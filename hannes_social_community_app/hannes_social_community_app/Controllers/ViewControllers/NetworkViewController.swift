@@ -82,6 +82,12 @@ extension NetworkViewController: UITableViewDelegate, UITableViewDataSource{
         return 40
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UserDetailViewController()
+        vc.user = self.viewData[indexPath.section][indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView:UIView! = UIView(frame: CGRect(x: 0, y: 0,width: self.view.frame.width,height: 40))
         headerView.backgroundColor = UIColor.appThemeColor()

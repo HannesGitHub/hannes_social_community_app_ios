@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		026E08AF842A24C2A0831356 /* Pods_hannes_social_community_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09CEC4A90DDF3651A947E20B /* Pods_hannes_social_community_appUITests.framework */; };
+		39DB487A1FA63A8F00230F45 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DB48791FA63A8F00230F45 /* UserDetailViewController.swift */; };
 		4367ACD09296ED2DF1C4A573 /* Pods_hannes_social_community_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 406E619D6ADC8B120F2EC5E2 /* Pods_hannes_social_community_appTests.framework */; };
 		9096B09885AEAD9EFBB61B24 /* Pods_hannes_social_community_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B11508E8EAE6C56DBEAF3D5C /* Pods_hannes_social_community_app.framework */; };
 		D12F020E1FA4AC8C00FA3E44 /* SocialHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F020D1FA4AC8C00FA3E44 /* SocialHelper.swift */; };
 		D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */; };
 		D12F02141FA4CE7400FA3E44 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02131FA4CE7400FA3E44 /* Post.swift */; };
 		D12F02161FA4D1C400FA3E44 /* PostCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02151FA4D1C400FA3E44 /* PostCellController.swift */; };
-		D12F02181FA4D48600FA3E44 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */; };
 		D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5610D1FA40B6700CF76CA /* ApiClient.swift */; };
 		D1A5610F1FA40B9C00CF76CA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1A561101FA40B9C00CF76CA /* Alamofire.framework */; };
 		D1A561131FA410DC00CF76CA /* ActiveUserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */; };
@@ -54,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		09CEC4A90DDF3651A947E20B /* Pods_hannes_social_community_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hannes_social_community_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39DB48791FA63A8F00230F45 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		3C10B2968E8A5636871D4CDB /* Pods-hannes_social_community_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hannes_social_community_app.release.xcconfig"; path = "Pods/Target Support Files/Pods-hannes_social_community_app/Pods-hannes_social_community_app.release.xcconfig"; sourceTree = "<group>"; };
 		406E619D6ADC8B120F2EC5E2 /* Pods_hannes_social_community_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_hannes_social_community_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ED8743908D7205DD982DC21 /* Pods-hannes_social_community_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hannes_social_community_appTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hannes_social_community_appTests/Pods-hannes_social_community_appTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		D12F02111FA4B59B00FA3E44 /* CustomCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellController.swift; sourceTree = "<group>"; };
 		D12F02131FA4CE7400FA3E44 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D12F02151FA4D1C400FA3E44 /* PostCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCellController.swift; sourceTree = "<group>"; };
-		D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		D1A5610D1FA40B6700CF76CA /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		D1A561101FA40B9C00CF76CA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A561121FA410DC00CF76CA /* ActiveUserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUserHelper.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 				D1A5611A1FA41A6500CF76CA /* NetworkViewController.swift */,
 				D1A5611C1FA41B1800CF76CA /* UsersViewController.swift */,
 				D1A561211FA426C800CF76CA /* LoginViewController.swift */,
-				D12F02171FA4D48600FA3E44 /* UserDetailViewController.swift */,
+				39DB48791FA63A8F00230F45 /* UserDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -564,7 +564,7 @@
 			files = (
 				D1BBFDED1FA4090700E80B20 /* AppDelegate.swift in Sources */,
 				D1A561241FA42C6400CF76CA /* UIButtonExtension.swift in Sources */,
-				D12F02181FA4D48600FA3E44 /* UserDetailViewController.swift in Sources */,
+				39DB487A1FA63A8F00230F45 /* UserDetailViewController.swift in Sources */,
 				D12F02121FA4B59B00FA3E44 /* CustomCellController.swift in Sources */,
 				D1BBFDF51FA4090700E80B20 /* hannes_social_community_app.xcdatamodeld in Sources */,
 				D1A5610E1FA40B6700CF76CA /* ApiClient.swift in Sources */,

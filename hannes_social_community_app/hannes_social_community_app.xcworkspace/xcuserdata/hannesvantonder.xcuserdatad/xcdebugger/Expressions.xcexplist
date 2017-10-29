@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #1 in HomeViewController.retrieveDataFromBackend():HomeViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(dict)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in UserDetailViewController.btnUnFollowTapped():UserDetailViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(dict)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "NetworkViewController.populateViewData(dict:index:):NetworkViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewData">
+            </PersistentString>
+            <PersistentString
+               value = "SocialHelper.populateUsersFromList(dict: response)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static SocialHelper.populateUsersFromList(dict:):SocialHelper.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "print(innerObj)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ApiService.unFollowUser(userId:completionHandler:):ApiClient.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

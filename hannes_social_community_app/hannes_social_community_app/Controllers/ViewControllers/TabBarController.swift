@@ -51,7 +51,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
     @objc func handleLogOut(){
         ActiveUserHelper.uuid = nil
         let loginController = LoginViewController()
-        
         self.present(loginController, animated: true, completion: nil)
     }
 }

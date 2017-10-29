@@ -93,6 +93,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         buildView()
         updateStyling()
+        populateTestDetails()
+    }
+    
+    func populateTestDetails(){
+        txtName.text = "test1@bitcube.co.za"
+        txtUsername.text = "test1@bitcube.co.za"
+        txtPassword.text = "P@ssw0rd"
     }
     
     func updateStyling(){
