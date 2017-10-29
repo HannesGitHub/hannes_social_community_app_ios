@@ -97,8 +97,8 @@ class LoginViewController: UIViewController {
     }
     
     func populateTestDetails(){
-        txtName.text = "test1@bitcube.co.za"
-        txtUsername.text = "test1@bitcube.co.za"
+        txtName.text = "John"
+        txtUsername.text = "john@bitcube.co.za"
         txtPassword.text = "P@ssw0rd"
     }
     

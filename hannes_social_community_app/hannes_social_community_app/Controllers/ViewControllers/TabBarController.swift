@@ -33,17 +33,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         
         // Create home tab
         let homeTab = HomeViewController()
-        let homeTabBarItem = UITabBarItem(title: "News", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let homeTabBarItem = UITabBarItem(title: "News", image: UIImage(named: "news"), selectedImage: UIImage(named: "selectedImage.png"))
         homeTab.tabBarItem = homeTabBarItem
         
         //Create network tab
         let networkTab = NetworkViewController()
-        let networkTabBarItem = UITabBarItem(title: "Network", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let networkTabBarItem = UITabBarItem(title: "Network", image: UIImage(named: "network"), selectedImage: UIImage(named: "selectedImage.png"))
         networkTab.tabBarItem = networkTabBarItem
         
         //Create users tab
         let usersTab = UsersViewController()
-        let usersTabBarItem = UITabBarItem(title: "Users", image: UIImage(named: "defaultImage.png"), selectedImage: UIImage(named: "selectedImage.png"))
+        let usersTabBarItem = UITabBarItem(title: "Users", image: UIImage(named: "users"), selectedImage: UIImage(named: "selectedImage.png"))
         usersTab.tabBarItem = usersTabBarItem
         
         self.viewControllers = [homeTab, networkTab, usersTab]

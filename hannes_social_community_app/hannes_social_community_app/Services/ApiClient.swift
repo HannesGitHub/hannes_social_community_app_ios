@@ -9,9 +9,7 @@
 import Foundation
 import Alamofire
 
-//var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
-
-var baseUrl = "https://bae412d0.ngrok.io/"
+var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"
 var getFollowersUrl = "api/v1/me/followers"
@@ -90,7 +88,11 @@ class ApiService{
     }
     
     func createPost(title: String, postText: String, completionHandler:@escaping (NSDictionary?, NSError?) -> ()){
-        baseRequest(methodUrl: createPostUrl, .post, paramaters: nil, headers: headers) { (response, error) in
+        let paramaters = [
+            "title": title,
+            "message": postText
+        ]
+        baseRequest(methodUrl: createPostUrl, .post, paramaters: paramaters, headers: headers) { (response, error) in
             completionHandler(response, error)
         }
     }

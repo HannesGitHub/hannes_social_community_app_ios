@@ -61,6 +61,7 @@ class PostViewController: UIViewController {
             }
             else{
                 print("Post created successfully")
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }
