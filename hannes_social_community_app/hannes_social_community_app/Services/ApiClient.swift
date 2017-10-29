@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-
+ 
 var baseUrl = "https://hannes-social-community-app.herokuapp.com/"
 var signupUrl = "api/signup"
 var signinUrl = "api/login_auth"

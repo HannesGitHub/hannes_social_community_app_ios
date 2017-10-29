@@ -100,7 +100,7 @@ class PostViewController: UIViewController {
         self.view.addSubview(btnPost)
         btnPost.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
         btnPost.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10).isActive = true
-        btnPost.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
+        btnPost.topAnchor.constraint(equalTo: txtViewPost.bottomAnchor, constant: 10).isActive = true
         btnPost.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 }
